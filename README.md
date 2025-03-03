@@ -23,8 +23,7 @@ This portfolio is built to highlight my work in **machine learning, deep learnin
 ---
 
 ## 🚀 Technologies Used
-- **Frontend:** HTML, CSS, JavaScript  
-- **Frameworks:** Bootstrap / TailwindCSS  
+- **Frontend:** HTML, CSS, JavaScript    
 - **Hosting:** GitHub Pages  
 
 ---
