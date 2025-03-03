@@ -250,7 +250,7 @@ span {
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(391px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 100px;
     max-width: 1065px;
     width: 100%;
