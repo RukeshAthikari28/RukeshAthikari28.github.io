@@ -155,3 +155,33 @@ document.addEventListener("DOMContentLoaded", function () {
         body.style.background = ""; // Restore background opacity
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const projectBox = document.querySelector("#pdf");
+    const projectDetail = document.querySelector("#pdfs");
+    const closeButton = projectDetail.querySelector("svg");
+    const body = document.querySelector("body");
+
+    projectBox.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        projectDetail.style.display = "block"; // Show the project details section
+        projectDetail.style.position = "fixed"; // Make it a fullscreen overlay
+        projectDetail.style.top = "50%";
+        projectDetail.style.left = "50%";
+        projectDetail.style.transform = "translate(-50%, -50%)";
+        projectDetail.style.width = "100%";
+        projectDetail.style.height = "100%";
+        projectDetail.style.zIndex = "1000";
+        projectDetail.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.2)";
+        projectDetail.style.padding = "20px";
+        projectDetail.style.borderRadius = "10px";
+        projectDetail.style.overflowY = "auto";
+        
+        // Reduce background opacity
+        body.style.background = "rgba(0, 0, 0, 0.9)";
+    });
+
+    closeButton.addEventListener("click", function () {
+        projectDetail.style.display = "none"; // Hide the project details section
+        body.style.background = ""; // Restore background opacity
+    });
+});
