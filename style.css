@@ -10,11 +10,12 @@
 }
 
 :root {
-    --bg-color: #fffdfd;
-    --snd-bg-color: #9700FF;
-    --text-color: #ffffff;
-    --main-color: #090917;
+    --bg-color: #ffffff;        /* white */
+    --snd-bg-color: #2563EB;    /* blue-600 */
+    --text-color: #ffffff;      /* white text on dark */
+    --main-color: #0B1220;      /* deep navy (cleaner than pure black) */
 }
+
 
 html {
     font-size: 62.5%;
@@ -130,7 +131,7 @@ section {
 
 span {
     /* color: var(--text-color); */
-    color: #9700FF;
+    color: #2563EB;
 }
 
 .home-content h1 {
@@ -167,7 +168,7 @@ span {
 .social-media a:hover {
     transform: scale(1.2)translateY(-10px);
     background-color: var(--main-color);
-    color: #9700FF;
+    color: #2563EB;
     box-shadow: 0 0 25px var(--main-color); 
 }
 
@@ -178,7 +179,7 @@ span {
     border-radius: 4rem;
     box-shadow: none;
     font-size: 2rem;
-    background-color: #9700FF;
+    background-color: #2563EB;
     color: #1e1e2e;
     letter-spacing: .1rem;
     font-weight: 600;
