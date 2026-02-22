@@ -1,4 +1,4 @@
-this style.css; * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -82,6 +82,34 @@ section {
     color: var(--bg-color);
     cursor: pointer;
     display: none;
+}
+
+/* Mobile navbar */
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 2rem;
+        background: rgba(9, 9, 23, 0.98);
+        flex-direction: column;
+        gap: 1.5rem;
+        transition: top 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar.active {
+        top: 7rem;
+    }
+
+    .navbar a {
+        margin-left: 0;
+    }
 }
 
 /* Home Section */
@@ -758,6 +786,198 @@ span {
         grid-template-columns: repeat(1, 1fr); /* 1 column for better fit */
         gap: 2rem;
     }
+<<<<<<< HEAD
+}
+
+@media (max-width:991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3%;
+    }
+    .services{
+        padding: 7rem
+    }
+    .contact form .input-box input {
+        width: 100%;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media (max-width:786px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 255px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: var(--main-color);
+        transition: all 0.5s ease;
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar a {
+        display: block;
+        padding: 17px;
+        font-size: 22px;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+    .home{
+        flex-direction: column;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .home-content{
+        order: 2;
+        margin-left: 1rem;
+    }
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .services h2{
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width:617px) {
+    .home-img img{
+        width: 70vw;
+        margin-top: 10px;
+    }
+    .about-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media (max-width:450px) {
+    html{
+        font-size: 50%;
+    }
+}
+.mail
+{
+    color: #2f0f42;
+    font-size: medium;
+    padding-left: 20px;
+}
+
+
+
+@media (max-width: 1024px) {
+    .fXcOFK {
+        max-width: 90%;
+        margin: 80px auto;
+    }
+    
+    .ubcpl {
+        max-height: 300px;
+        max-width: 600px;
+    }
+
+    .XYPYR {
+        font-size: 24px;
+    }
+
+    .bsUtMx {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    .xgfQb {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Devices (Max width: 768px) */
+@media (max-width: 768px) {
+    .fXcOFK {
+        padding: 15px;
+        max-width: 95%;
+    }
+    
+    .ubcpl {
+        max-width: fit-content;
+        max-width: max-content;
+    }
+
+    .XYPYR {
+        font-size: 22px;
+    }
+
+    .bsUtMx {
+        font-size: 12px;
+        padding: 4px 7px;
+    }
+
+    .xgfQb {
+        font-size: 13px;
+    }
+
+    .hVezlV {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ftbywb, .loCxib {
+        width: 100%;
+    }
+}
+
+/* Small Mobile Screens (Max width: 480px) */
+@media (max-width: 480px) {
+    .fXcOFK {
+        margin: 50px auto;
+        padding: 12px;
+    }
+
+    .ubcpl {
+        max-height: 200px;
+        max-width: fit-content;
+    }
+
+    .XYPYR {
+        font-size: 20px;
+    }
+
+    .bsUtMx {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+
+    .xgfQb {
+        font-size: 12px;
+    }
+
+    .ftbywb, .loCxib {
+        padding: 10px;
+    }
+=======
+>>>>>>> 3cbea3b (Fix portfolio: CSS typo, project modals, mobile menu, education icons)
 }
 
 @media (max-width:991px) {
