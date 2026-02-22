@@ -24,6 +24,7 @@ html {
 body {
     background: var(--main-color);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 
@@ -101,6 +102,9 @@ section {
         gap: 1.5rem;
         transition: top 0.3s ease;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        max-height: calc(100vh - 7rem);
+        overflow-y: auto;
     }
 
     .navbar.active {
@@ -109,6 +113,9 @@ section {
 
     .navbar a {
         margin-left: 0;
+        display: block;
+        padding: 0.5rem 0;
+        font-size: 1.8rem;
     }
 }
 
@@ -786,78 +793,133 @@ span {
         grid-template-columns: repeat(1, 1fr); /* 1 column for better fit */
         gap: 2rem;
     }
-<<<<<<< HEAD
 }
 
-@media (max-width:991px) {
+@media (max-width: 991px) {
     .header {
         padding: 2rem 3%;
     }
-    section{
-        padding: 10rem 3%;
-    }
-    .services{
-        padding: 7rem
+    section {
+        padding: 8rem 3% 2rem;
     }
     .contact form .input-box input {
         width: 100%;
     }
-    .footer{
+    .footer {
         padding: 2rem 3%;
     }
 }
-@media (max-width:786px) {
-    #menu-icon {
-        display: block;
-    }
-    .navbar {
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        width: 255px;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        background: var(--main-color);
-        transition: all 0.5s ease;
-        backdrop-filter: blur(10px);
-    }
 
-    .navbar a {
-        display: block;
-        padding: 17px;
-        font-size: 22px;
+@media (max-width: 768px) {
+    section {
+        padding: 7rem 4% 2rem;
+        min-height: auto;
     }
-
-    .navbar.active {
-        right: 0;
+    .heading {
+        font-size: 3.2rem;
+        margin-bottom: 3rem;
     }
-    .home{
+    .home {
         flex-direction: column;
     }
-    .home-content h3{
+    .home-content h3 {
         font-size: 2.6rem;
     }
-    .home-content h1{
-        font-size: 5rem;
+    .home-content h1 {
+        font-size: 4.2rem;
     }
-    .home-content{
+    .home-content {
         order: 2;
-        margin-left: 1rem;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
     }
-    .home-img img{
+    .home-img img {
         width: 70vw;
+        max-width: 260px;
         margin-top: 4rem;
     }
-    .about{
+    .social-media {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .about {
         flex-direction: column-reverse;
     }
-    .about-img img{
+    .about-img img {
         width: 70vw;
+        max-width: 260px;
         margin-top: 4rem;
     }
-    .services h2{
-        margin-bottom: 3rem;
+    .about-content {
+        padding: 0 1rem;
+    }
+    .about-content p {
+        font-size: 1.6rem;
+    }
+    .certificate-box {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 0.5rem;
+    }
+    .certificate-item img {
+        width: 100%;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .testimonial-item {
+        width: 100%;
+        max-width: 100%;
+        min-height: 360px;
+    }
+    .wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 0.5rem;
+    }
+    .skills-container {
+        gap: 2rem;
+        padding: 0 0.5rem;
+    }
+    .skill-card h3 {
+        font-size: 1.8rem;
+    }
+    .skill {
+        font-size: 1.3rem;
+        padding: 6px 10px;
+    }
+    .img {
+        width: 24px;
+        min-width: 24px;
+    }
+    #experience {
+        font-size: 14px;
+    }
+    .vertical-timeline-element-content {
+        margin: 12px 0 !important;
+        padding: 12px !important;
+    }
+    .cBpVdX {
+        flex-wrap: wrap;
+    }
+    .kLQxBu {
+        height: 40px;
+    }
+    .iXisnl {
+        font-size: 2rem;
+    }
+    .ggylXt, .bEdMEg {
+        font-size: 1.5rem;
+    }
+    .timeline_title {
+        font-size: 2rem;
+    }
+    .timeline_text {
+        font-size: 1.6rem;
+    }
+    .timeline_data {
+        font-size: 1.4rem;
     }
 }
 
@@ -874,10 +936,15 @@ span {
         grid-template-columns: repeat(1,1fr);
     }
 }
-@media (max-width:450px) {
-    html{
-        font-size: 50%;
-    }
+@media (max-width: 480px) {
+    .home-content h1 { font-size: 3.2rem; }
+    .home-content h3 { font-size: 2.2rem; }
+    .heading { font-size: 2.8rem; }
+    .logo { font-size: 1.6rem; }
+    .btn { padding: 1.2rem 1.6rem; font-size: 1.6rem; }
+}
+@media (max-width: 450px) {
+    html { font-size: 50%; }
 }
 .mail
 {
@@ -976,99 +1043,17 @@ span {
     .ftbywb, .loCxib {
         padding: 10px;
     }
-=======
->>>>>>> 3cbea3b (Fix portfolio: CSS typo, project modals, mobile menu, education icons)
 }
 
-@media (max-width:991px) {
-    .header {
-        padding: 2rem 3%;
-    }
-    section{
-        padding: 10rem 3%;
-    }
-    .services{
-        padding: 7rem
-    }
-    .contact form .input-box input {
-        width: 100%;
-    }
-    .footer{
-        padding: 2rem 3%;
-    }
+@media (max-width: 480px) {
+    .home-content h1 { font-size: 3.2rem; }
+    .home-content h3 { font-size: 2.2rem; }
+    .heading { font-size: 2.8rem; }
+    .logo { font-size: 1.6rem; }
+    .btn { padding: 1.2rem 1.6rem; font-size: 1.6rem; }
 }
-@media (max-width:786px) {
-    #menu-icon {
-        display: block;
-    }
-    .navbar {
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        width: 255px;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        background: var(--main-color);
-        transition: all 0.5s ease;
-        backdrop-filter: blur(10px);
-    }
-
-    .navbar a {
-        display: block;
-        padding: 17px;
-        font-size: 22px;
-    }
-
-    .navbar.active {
-        right: 0;
-    }
-    .home{
-        flex-direction: column;
-    }
-    .home-content h3{
-        font-size: 2.6rem;
-    }
-    .home-content h1{
-        font-size: 5rem;
-    }
-    .home-content{
-        order: 2;
-        margin-left: 1rem;
-    }
-    .home-img img{
-        width: 70vw;
-        margin-top: 4rem;
-    }
-    .about{
-        flex-direction: column-reverse;
-    }
-    .about-img img{
-        width: 70vw;
-        margin-top: 4rem;
-    }
-    .services h2{
-        margin-bottom: 3rem;
-    }
-}
-
-@media (max-width:617px) {
-    .home-img img{
-        width: 70vw;
-        margin-top: 10px;
-    }
-    .about-img img{
-        width: 70vw;
-        margin-top: 4rem;
-    }
-    .wrapper{
-        grid-template-columns: repeat(1,1fr);
-    }
-}
-@media (max-width:450px) {
-    html{
-        font-size: 50%;
-    }
+@media (max-width: 450px) {
+    html { font-size: 50%; }
 }
 .mail
 {
