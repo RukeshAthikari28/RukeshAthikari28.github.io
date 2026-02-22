@@ -1,16 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Mobile menu toggle
+    // Mobile menu: three bars on top right, drawer collapsed by default
     const menu = document.querySelector('#menu-icon');
     const navbar = document.querySelector('.navbar');
+    const overlay = document.querySelector('#nav-overlay');
+    function closeMenu() {
+        if (menu) menu.classList.remove('bx-x');
+        if (navbar) navbar.classList.remove('active');
+        if (overlay) {
+            overlay.classList.remove('show');
+            overlay.setAttribute('aria-hidden', 'true');
+        }
+    }
+    function openMenu() {
+        if (navbar) navbar.classList.add('active');
+        if (menu) menu.classList.add('bx-x');
+        if (overlay) {
+            overlay.classList.add('show');
+            overlay.setAttribute('aria-hidden', 'false');
+        }
+    }
     if (menu && navbar) {
-        menu.onclick = () => {
-            menu.classList.toggle('bx-x');
-            navbar.classList.toggle('active');
+        menu.onclick = function () {
+            if (navbar.classList.contains('active')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
         };
-        window.onscroll = () => {
-            menu.classList.remove('bx-x');
-            navbar.classList.remove('active');
-        };
+        if (overlay) {
+            overlay.onclick = closeMenu;
+        }
+        navbar.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', closeMenu);
+        });
+        window.onscroll = closeMenu;
     }
 
     // Typed.js for hero text
